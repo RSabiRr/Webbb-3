@@ -1,0 +1,1202 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - SB Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link href="~/assets/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+            crossorigin="anonymous"></script>
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" asp-controller="home" asp-action="index"><img class="img-fluid" src="~/img/Безымянный.png" alt=""></a>
+
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Navbar-->
+        <ul class="navbar-nav d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
+                   aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#!">Settings</a></li>
+                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#!">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">Core</div>
+                        <a class="nav-link" asp-controller="LoginStudent" asp-action="about">
+                            <div class="sb-nav-link-icon"> <i class="fas fa-address-card"></i> </div>
+                            Sexsi melumat
+                        </a>
+
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                           data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            Fenler
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
+                             data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" asp-controller="LoginStudent" asp-action="Continuity">fennin adi</a>
+                            </nav>
+                        </div>
+            </nav>
+        </div>
+
+
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid py-3">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="container-text px-3">
+                                <p>
+                                    fennin adi
+                                </p>
+                            </div>
+                            <div class="button-list text-center">
+                                <a asp-controller="LoginStudent" asp-action="document" id="btn"
+                                   class="btn btn-primary  btn-sm btn-rounded w-md waves-effect  ">Serbest Is </a>
+                                <a asp-controller="LoginStudent" asp-action="valuation" id="btn"
+                                   class="btn  btn-primary  btn-sm btn-rounded w-md waves-effect">
+                                    Cari müvəffəqiyyət
+                                </a>
+                                <a asp-controller="LoginStudent" asp-action="Continuity" id="btn"
+                                   class="btn btn-primary  btn-sm btn-rounded w-md waves-effect  ">Davamiyyət </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <div class="container-fluid">
+                    <div class="card" style="margin-bottom: 5px !important;">
+                        <div class="card-body table-responsive">
+                            <table class="table-sm table-bordered" border="1" cellspacing="0" width="100%">
+                            </table>
+                            <table id="op_list" class="table-sm table-bordered" border="1" cellspacing="0"
+                                   cellpadding="0" width="100%" bordercolor="#000000" style="border-collapse:collapse;">
+                                <tbody>
+                                    <!-- birinci setr -->
+                                    <tr>
+                                        <td align="center">Fənnin adı </td>
+                                        <td align="center">Saatların cəmi </td>
+                                        <td align="center">Həftəlik dərs saatları </td>
+                                        <td align="center">Kredit </td>
+                                        <td align="center" rowspan="2">2022.02.15 - 2022.05.31 </td>
+                                        <td align="center">Qrup </td>
+                                        <td align="center">Müəllim </td>
+                                    </tr>
+                                    <!-- ikinci setr -->
+
+                                    <tr>
+                                        <td align="center">İstehsalat təcrübəsi</td>
+                                        <td align="center">140</td>
+                                        <td align="center"></td>
+                                        <td align="center">21</td>
+                                        <td align="center">688a2</td>
+                                        <td align="center">Elminaz</td>
+                                    </tr>
+                                    <!-- ucuncu setr -->
+
+                                    <tr>
+                                        <td class="text-center"> Davamiyyət : i/e</td>
+                                        <td class="text-center"> İştirak etmir: q/b </td>
+                                        <td class="text-center">
+                                            Daxil edilməyib : d/e
+                                        </td>
+                                        <td class="text-center"> Mühazirə : M </td>
+                                        <td class="text-center" colspan="2"> Məşğələ/seminar : S </td>
+                                        <td class="text-center"> Laboratoriya: L </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <table border="0" cellspacing="0" width="100%" class="table-sm table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td align="right">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body table-responsive">
+
+                                    <table id="datatable-buttons" class="table-sm table-bordered  table-stripped">
+                                        <thead>
+                                            <tr>
+                                            </tr>
+                                            <!-- ders saati -->
+                                            <tr>
+                                                <th width="10px" align="center" class="list_text6" rowspan="2">
+                                                    Nömrə
+                                                </th>
+                                                <th width="10px" align="center" class="list_text6" rowspan="2">
+                                                    İdentifikator
+                                                </th>
+                                                <th width="100px" align="center" class="list_text6" rowspan="2">
+                                                    Adı
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    1
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    2
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    3
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    4
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    5
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    6
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    7
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    8
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    9
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    10
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    11
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    12
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    13
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    14
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    15
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    16
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    17
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    18
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    19
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    20
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    21
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    22
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    23
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    24
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    25
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    26
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    27
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    28
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    29
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    30
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    31
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    32
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    33
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    34
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    35
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    36
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    37
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    38
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    39
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    40
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    41
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    42
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    43
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    44
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    45
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    46
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    47
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    48
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    49
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    50
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    51
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    52
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    53
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    54
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    55
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    56
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    57
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    58
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    59
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    60
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    61
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    62
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    63
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    64
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    65
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    66
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    67
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    68
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    69
+                                                </th>
+                                                <th width="16px" align="center" style="border-style:solid" colspan="1">
+                                                    70
+                                                </th>
+                                                <th width="2px" style="border-style:solid" rowspan="33"></th>
+                                                <th width="30px" align="center" class="list_text6">
+                                                    Bal
+                                                    <!-- 점수 -->
+                                                </th>
+                                                <th width="50px" align="center" class="list_text6">
+                                                    Davamiyyət faizi
+                                                    <!-- 출석률 -->
+                                                </th>
+                                            </tr>
+
+                                            <!-- hansi ders -->
+                                            <tr>
+
+                                                <th width="16px" align="center" class="$list_text6">M</th>
+
+                                                <th width="16px" align="center" class="$list_text6">M</th>
+
+                                                <th width="16px" align="center" class="$list_text6">M</th>
+
+                                                <th width="16px" align="center" class="$list_text6">M</th>
+
+                                                <th width="16px" align="center" class="$list_text6">M</th>
+
+                                                <th width="16px" align="center" class="$list_text6">M</th>
+
+                                                <th width="16px" align="center" class="$list_text6">M</th>
+
+                                                <th width="16px" align="center" class="$list_text6">M</th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+
+                                                <th width="16px" align="center" class="$list_text6"></th>
+                                                <th align="center" class="list_text6">10</th>
+                                                <th align="center" class="list_text6">100%</th>
+                                            </tr>
+
+
+                                            <!-- ders tarixi -->
+
+                                            <tr>
+                                                <th align="center" colspan="3">Dərsin tarixi</th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;">16/2</font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;">17/2</font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;">18/2</font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;">21/2</font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;">22/2</font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;">23/2</font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;">24/2</font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;">25/2</font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:11px;"></font>
+                                                </th>
+                                                <th align="center" class="list_text6"></th>
+                                                <th align="center" class="list_text6"></th>
+                                            </tr>
+
+
+                                            <!-- yazilma tarixi -->
+
+                                            <tr>
+                                                <th align="center" colspan="3">Jurnalın yazılma tarixi</th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;">27/2</font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;">27/2</font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;">27/2</font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;">27/2</font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;">27/2</font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;">27/2</font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;">27/2</font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;">27/2</font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th width="16px" align="center" class="list_text6">
+                                                    <font style="font-size:9px;"></font>
+                                                </th>
+                                                <th align="center" class="list_text6">
+                                                </th>
+                                                <td align="center" class="list_text6">
+                                                </td>
+                                            </tr>
+
+
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <th>1</th>
+                                                <th>telebenin id</th>
+
+                                                <!-- telebenin melummatdari -->
+                                                <th class="tooltipped" style="overflow:hidden; white-space:nowrap"
+                                                    data-container="body" data-toggle="popover" data-placement="right"
+                                                    data-content="ƏLİYEV SABİR" id="201806274" data-original-title=""
+                                                    title="" aria-describedby="popover393368">ƏLİYEV SABİR</th>
+
+                                                <!-- qayb ve i/e -->
+                                                <td align="center" class=" attend-td">
+                                                    <span class="attend-label ie">i/e</span>
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                    <span class="attend-label ie">i/e</span>
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                    <span class="attend-label ie">i/e</span>
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                    <span class="attend-label ie">i/e</span>
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                    <span class="attend-label ie">i/e</span>
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                    <span class="attend-label ie">i/e</span>
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                    <span class="attend-label ie">i/e</span>
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                    <span class="attend-label ie">i/e</span>
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class=" attend-td">
+                                                </td>
+                                                <td align="center" class="list_text6"></td>
+                                                <td align="center" class="list_text6">10</td>
+
+                                                <td align="center" class="list_text6">100</td>
+                                            </tr>
+
+                                        </tbody>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </main>
+
+
+
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; Your Website 2021</div>
+                        <div>
+                            <a href="#">Privacy Policy</a>
+                            &middot;
+                            <a href="#">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="~/assets/js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="~/assets/demo/chart-area-demo.js"></script>
+    <script src="~/assets/demo/chart-bar-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="~/assets/js/datatables-simple-demo.js"></script>
+</body>
+
+</html>
+ 

@@ -1,0 +1,68 @@
+﻿@model List<Total>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<section id="about">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12 title">
+                <h3>
+                    Haqqimizda
+                </h3>
+                <p>
+                    It is a long established fact that a reader will be distracted by the
+                    readable content of a page when looking at its layout
+                </p>
+                <div class="dot1">
+                </div>
+                <div class="dot1">
+                </div>
+                <div class="dot1">
+                </div>
+            </div>
+
+            <div class="col-lg-6 content">
+                <h2>
+                    Welcome to Our EduVas Education Platform
+                </h2>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                    scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged.
+                </p>
+                <a href="" class="btn mb-5">daha cox </a>
+            </div>
+            <div class="col-lg-6 img">
+                <img src="img/about/about_img.jpg" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<section id="total">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4">
+                    <div class="borderr">
+                        @*<img src="img/about/fun1.png" alt="">*@
+                        <i class="@item.Icon"></i>
+                        <h4>
+                            <div class="timer" data-from="0" data-to="@item.Numeral" data-speed="5000" data-refresh-interval="50"></div>+
+
+                        </h4>
+                        <h3>
+                            @item.Name
+                        </h3>
+                    </div>
+                </div>
+                            }
+           
+        </div>
+    </div>
+
+</section>
+

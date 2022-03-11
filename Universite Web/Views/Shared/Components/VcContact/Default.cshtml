@@ -1,0 +1,29 @@
+﻿@model Settings
+
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 contact">
+                    <h3>
+                        Bizimlə Əlaqe:
+                    </h3>
+                    <div class="location">
+                        <p>
+                           @Model.Adress <i class="fas fa-map-marker-alt"></i>
+                        </p>
+                        <p>
+                           @Model.Phone <i class="fas fa-phone"> </i>
+                        </p>
+                        <p>
+                           @Model.Email <i class="fas fa-envelope"></i>
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+                    <iframe src="@Model.MapLink" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
